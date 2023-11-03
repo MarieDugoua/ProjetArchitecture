@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,15 +6,5 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Commandes\" />
-    <Folder Include="MarsRover\" />
-    <Folder Include="Communication\" />
-    <Folder Include="Mission Control\" />
-    <Folder Include="Topologie\" />
-    <Folder Include="Socket\" />
-    <Folder Include="Repeater\" />
-  </ItemGroup>
 
 </Project>
