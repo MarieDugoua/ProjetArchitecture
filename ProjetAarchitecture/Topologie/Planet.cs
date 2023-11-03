@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetAarchitecture.Topologie
 {
-    internal class Planet
+    public class Planet
     {
     }
 }

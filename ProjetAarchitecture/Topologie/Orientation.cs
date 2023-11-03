@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetAarchitecture.Topologie
 {
-    internal class Orientation
+    public enum Orientation
     {
+        N, // North
+        E, // East
+        S, // South
+        W  // West
     }
 }

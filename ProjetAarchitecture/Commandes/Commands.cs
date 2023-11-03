@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetAarchitecture.Commandes
 {
-    internal class Commands
+    public enum Commands
     {
+        Advance,
+        Reverse,
+        TurnLeft,
+        TurnRight
     }
 }
