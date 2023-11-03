@@ -13,7 +13,7 @@ namespace ProjetAarchitecture.MarsRover.Tests
     {
         [TestMethod()]
         public void ExecuteCommandTest()
-        {/
+        {
             Assert.Fail();
         }
     }
