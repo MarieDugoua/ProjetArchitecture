@@ -38,6 +38,7 @@ public class PlanetTests
     {
         Position pos = new Position(8, 1);
         bool res = obstacles.Any(p => p.Position.X == pos.X && p.Position.Y == pos.Y);
+        Assert.IsTrue(!res);
         if(!res)
         {
             Console.WriteLine("Aucun obtsacle à la position (8, 1).");
@@ -49,6 +50,7 @@ public class PlanetTests
 
         pos = new Position(2, 5);
         res = obstacles.Any(p => p.Position.X == pos.X && p.Position.Y == pos.Y);
+        Assert.IsTrue(res);
         if(res)
         {
             Console.WriteLine("Il y a un obstacle à la position (2, 5).");
