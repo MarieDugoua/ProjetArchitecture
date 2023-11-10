@@ -16,4 +16,13 @@
     <PackageReference Include="coverlet.collector" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="MarsRoverTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MarsRoverTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetArchitecture\ProjetArchitecture.csproj" />
+  </ItemGroup>
 </Project>
