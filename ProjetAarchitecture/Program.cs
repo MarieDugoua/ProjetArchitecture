@@ -1,9 +1,7 @@
 ﻿using ProjetAarchitecture.Commandes;
 using ProjetAarchitecture.MarsRover;
 using ProjetAarchitecture.Topologie;
-using ProjetAarchitecture.Commandes;
-using ProjetAarchitecture.MarsRover;
-using ProjetAarchitecture.Topologie;
+
 
 public class Program
 {
