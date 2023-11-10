@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjetAarchitecture.Communication
 {
-    internal class ICommandReceiver
+    public interface ICommandReceiver
     {
+       
+        Task ListenAndSendResponseAsync(Func<string, string> whatToDoOnRequest, CancellationToken token);
     }
 }

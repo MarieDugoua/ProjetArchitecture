@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjetAarchitecture.Communication
 {
-    internal class ICommandSender
+    public interface ICommandSender
     {
+        Task<string> SendAndWaitForResponseAsync(string message);
     }
 }
+
