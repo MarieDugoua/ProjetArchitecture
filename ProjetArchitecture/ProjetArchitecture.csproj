@@ -7,4 +7,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Command\" />
+    <None Remove="Communication\" />
+    <None Remove="MarsRover\" />
+    <None Remove="MissionControl\" />
+    <None Remove="Repeater\" />
+    <None Remove="Socket\" />
+    <None Remove="Topology\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="Communication\" />
+    <Folder Include="MarsRover\" />
+    <Folder Include="MissionControl\" />
+    <Folder Include="Repeater\" />
+    <Folder Include="Socket\" />
+    <Folder Include="Topology\" />
+  </ItemGroup>
 </Project>
