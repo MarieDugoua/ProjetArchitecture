@@ -1,9 +1,10 @@
 ﻿using System.Net.Sockets;
 using Configuration;
+using ProjetAarchitecture.Communication;
 
 namespace SocketServer;
 
-public class SocketServer : IMessageServer, IDisposable
+public class SocketServer : ICommandReceiver, IDisposable
 {
     private readonly Configuration.Configuration _configuration;
     private readonly ILogger _logger;

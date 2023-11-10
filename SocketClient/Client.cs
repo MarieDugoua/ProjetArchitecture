@@ -1,9 +1,10 @@
 ﻿using System.Net.Sockets;
 using Configuration;
+using ProjetAarchitecture.Communication;
 
 namespace SocketClient;
 
-public class SocketClient : IMessageClient, IDisposable
+public class SocketClient : ICommandSender, IDisposable
 {
     private readonly Configuration.Configuration _configuration;
     private readonly Socket _client;
