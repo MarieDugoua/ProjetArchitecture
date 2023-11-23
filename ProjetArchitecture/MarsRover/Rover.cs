@@ -6,7 +6,6 @@ using ProjetArchitecture.Topology;
 public class Rover
 {
     public Position Position { get; private set; }
-    public Planet Planet { get; private set; }
     public Orientation Orientation { get; private set; }
     private readonly Navigator _navigator;
 
