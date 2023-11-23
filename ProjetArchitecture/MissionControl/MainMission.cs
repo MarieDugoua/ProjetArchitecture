@@ -17,6 +17,6 @@ class MainClass
         Console myConsole = new Console(rover, yourCommunicationObject);
         myConsole.RunCommand();
 
-        Console.WriteLine("Rover is initialized and ready.");
+        System.Console.WriteLine("Rover is initialized and ready.");
     }
 }

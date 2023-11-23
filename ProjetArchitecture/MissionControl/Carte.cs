@@ -51,7 +51,7 @@ namespace ProjetArchitecture.MissionControl
             }
 
             // Display
-            Console.WriteLine(mapDisplay.ToString());
+            System.Console.WriteLine(mapDisplay.ToString());
         }
 
         private string RoverOrientationSymbol(Orientation orientation)
