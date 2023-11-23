@@ -1,4 +1,4 @@
-﻿namespace ProjetArchitecture.Socket;
+namespace ProjetArchitecture.Socket;
 
 internal class Interpreteur
 {

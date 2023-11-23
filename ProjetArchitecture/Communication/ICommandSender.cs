@@ -1,4 +1,4 @@
-﻿namespace ProjetArchitecture.Communication;
+namespace ProjetArchitecture.Communication;
 
 public interface ICommandSender
 {

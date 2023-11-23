@@ -1,4 +1,4 @@
-﻿namespace ProjetArchitecture.Configuration;
+namespace ProjetArchitecture.Configuration;
 
 using System.Net;
 using System.Text;

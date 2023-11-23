@@ -1,7 +1,6 @@
-﻿using ProjetArchitecture.Command;
+using ProjetArchitecture.Command;
 using ProjetArchitecture.MarsRover;
 using ProjetArchitecture.Topology;
-
 
 public class Program
 {

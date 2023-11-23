@@ -1,5 +1,6 @@
-﻿namespace ProjetArchitecture.Repeater;
+namespace ProjetArchitecture.Repeater;
 
 internal class MainRepeater
 {
+
 }

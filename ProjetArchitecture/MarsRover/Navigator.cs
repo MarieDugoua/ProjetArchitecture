@@ -1,4 +1,4 @@
-﻿namespace ProjetArchitecture.MarsRover;
+namespace ProjetArchitecture.MarsRover;
 
 using ProjetArchitecture.Topology;
 
