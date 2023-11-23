@@ -1,6 +1,5 @@
 ﻿namespace ProjetArchitecture.Topology;
 
-// Planet Class: Represents the planet's grid and obstacles.
 public class Planet
 {
     public int Width { get; }
@@ -13,14 +12,13 @@ public class Planet
         Height = height;
         _obstacles = obstacles?.ToList() ?? new List<Obstacle>();
     }
-
     public Position AdjustPosition(Position position)
     {
         int adjustedX = (position.X + Width) % Width;
         int adjustedY = (position.Y + Height) % Height;
         return new Position(adjustedX, adjustedY);
+        throw new ArgumentException("l'ajustement des positions n'a pas fonctionné");
     }
-
     public bool HasObstacleAt(Position position)
     {
         return _obstacles.Any(o => o.Position.X == position.X && o.Position.Y == position.Y);

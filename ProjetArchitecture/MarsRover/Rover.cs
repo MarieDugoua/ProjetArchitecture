@@ -1,11 +1,12 @@
 ﻿namespace ProjetArchitecture.MarsRover;
-using ProjetArchitecture.Topology;
-using ProjetArchitecture.Command;
 
-// Rover Class: Represents the rover and handles its movement based on received commands.
+using ProjetArchitecture.Command;
+using ProjetArchitecture.Topology;
+
 public class Rover
 {
     public Position Position { get; private set; }
+    public Planet Planet { get; private set; }
     public Orientation Orientation { get; private set; }
     private readonly Navigator _navigator;
 
@@ -15,8 +16,7 @@ public class Rover
         Orientation = orientation;
         _navigator = navigator;
     }
-
-    public void ExecuteCommand(Command command)
+    internal void ExecuteCommand(Command command)
     {
         switch (command)
         {

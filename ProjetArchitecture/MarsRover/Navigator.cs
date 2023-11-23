@@ -1,8 +1,7 @@
-﻿using System.Numerics;
-using ProjetArchitecture.Topology;
-namespace ProjetArchitecture.MarsRover;
+﻿namespace ProjetArchitecture.MarsRover;
 
-// Navigator Class: Handles the movement logic based on the rover's current state.
+using ProjetArchitecture.Topology;
+
 public class Navigator
 {
     private readonly Planet _planet;
@@ -11,7 +10,6 @@ public class Navigator
     {
         _planet = planet;
     }
-
     public Position Move(Position currentPosition, Orientation orientation, bool reverse = false)
     {
         Position nextPosition = new Position(currentPosition.X, currentPosition.Y);

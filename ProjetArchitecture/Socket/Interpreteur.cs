@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ProjetArchitecture.Socket;
 
-namespace ProjetArchitecture.Socket
+internal class Interpreteur
 {
-    internal class Interpreteur
-    {
-    }
 }

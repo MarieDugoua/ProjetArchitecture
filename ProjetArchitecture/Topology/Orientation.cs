@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace ProjetArchitecture.Topology;
 
-namespace ProjetArchitecture.Topology
+public enum Orientation
 {
-    public enum Orientation
-    {
-        N, // North
-        E, // East
-        S, // South
-        W  // West
-    }
+    N, // North
+    E, // East
+    S, // South
+    W  // West
 }

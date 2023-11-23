@@ -1,6 +1,5 @@
 ﻿namespace ProjetArchitecture.Topology;
 
-// Position Class: Represents the position (X, Y) on the planet grid.
 public class Position
 {
     public int X { get; set; }

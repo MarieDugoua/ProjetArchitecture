@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ProjetArchitecture.Communication;
 
-namespace ProjetArchitecture.Communication
+public interface ICommandReceiver
 {
-    internal class ICommandReceiver
-    {
-    }
+    Task ListenAndSendResponseAsync(Func<string, string> whatToDoOnRequest, CancellationToken token);
 }

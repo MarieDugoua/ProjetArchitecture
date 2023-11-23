@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace ProjetArchitecture.Command;
 
-namespace ProjetArchitecture.Command
+public enum Command
 {
-    public enum Command
-    {
-        Advance,
-        Reverse,
-        TurnLeft,
-        TurnRight
-    }
+    Advance,
+    Reverse,
+    TurnLeft,
+    TurnRight
 }

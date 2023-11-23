@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ProjetArchitecture.Repeater;
 
-namespace ProjetArchitecture.Repeater
+internal class MainRepeater
 {
-    internal class MainRepeater
-    {
-    }
 }
