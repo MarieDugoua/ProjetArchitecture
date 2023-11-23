@@ -22,7 +22,6 @@ public class PlanetTests
     [TestMethod]
     public void AdjustPositionTest()
     {
-        //Avance verticalement de 1
         Position pos = new Position(3, 9);
         Position newPos = planet.AdjustPosition(pos);
         Assert.AreEqual((newPos.X, newPos.Y), (3, 9));
