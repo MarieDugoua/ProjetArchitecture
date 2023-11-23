@@ -1,12 +1,9 @@
 ﻿using ProjetArchitecture.MarsRover;
 using ProjetArchitecture.Communication;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ProjetArchitecture.MissionControl
 {
-    public class Console : IDataCallback
+    public class Console
     {
         private List<char> commands = new List<char>();
         private readonly Rover myRover;
@@ -19,8 +16,6 @@ namespace ProjetArchitecture.MissionControl
             this.client = client;
             carte = new Carte(myRover);
 
-            // Assuming ListenAndSendResponseAsync is the method to start listening on the receiver
-            // The delegate provided here should define what to do with the received command
             Task.Run(() => client.ListenAndSendResponseAsync(ProcessCommand, new CancellationToken()));
         }
 
