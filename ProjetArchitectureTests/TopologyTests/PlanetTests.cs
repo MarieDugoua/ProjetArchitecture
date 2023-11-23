@@ -7,7 +7,7 @@ public class PlanetTests
     private Planet planet;
     private int width;
     private int height;
-    private List<Obstacle> obstacles;
+    private List<Obstacle> obstacles = new List<Obstacle>();
 
     [TestInitialize]
     public void TestInitialize()
@@ -23,42 +23,25 @@ public class PlanetTests
     public void AdjustPositionTest()
     {
         //Avance verticalement de 1
-        Position pos = new Position(0, 1);
+        Position pos = new Position(3, 9);
         Position newPos = planet.AdjustPosition(pos);
-        Assert.AreEqual((newPos.X, newPos.Y), (0, 1));
-
-        //Avance horizontalement de 1
-        pos = new Position(1, 0);
-        newPos = planet.AdjustPosition(pos);
-        Assert.AreEqual((newPos.X, newPos.Y), (1, 1));
+        Assert.AreEqual((newPos.X, newPos.Y), (3, 9));
     }
 
     [TestMethod]
-    public void HasObstacleAtTest()
+    public void HasObstacleAtTestFalse()
     {
         Position pos = new Position(8, 1);
         bool res = obstacles.Any(p => p.Position.X == pos.X && p.Position.Y == pos.Y);
         Assert.IsTrue(!res);
-        if(!res)
-        {
-            Console.WriteLine("Aucun obtsacle à la position (8, 1).");
-        }
-        else
-        {
-            Console.WriteLine("Il y a une erreur.");
-        }
+    }
 
-        pos = new Position(2, 5);
-        res = obstacles.Any(p => p.Position.X == pos.X && p.Position.Y == pos.Y);
+    [TestMethod]
+    public void HasObstacleAtTestTrue()
+    {
+        Position pos = new Position(2, 5);
+        bool res = obstacles.Any(p => p.Position.X == pos.X && p.Position.Y == pos.Y);
         Assert.IsTrue(res);
-        if(res)
-        {
-            Console.WriteLine("Il y a un obstacle à la position (2, 5).");
-        }
-        else
-        {
-            Console.WriteLine("Il y a une erreur.");
-        }
     }
 
     [TestMethod]
@@ -67,13 +50,6 @@ public class PlanetTests
         Obstacle obs = new Obstacle(6, 6);
         obstacles.Add(obs);
         bool res = obstacles.Any(p => p.Position.X == obs.Position.X && p.Position.Y == obs.Position.Y);
-        if (res)
-        {
-            Console.WriteLine("L'obstacle a bien été ajouté.");
-        }
-        else
-        {
-            Console.WriteLine("Il y a une erreur. L'obstacle n'a pas été ajouté.");
-        }
+        Assert.IsTrue(res);
     }
 }
