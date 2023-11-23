@@ -12,16 +12,14 @@ public class Carte
 
     public void UI(Rover rover)
     {
-        // Initialization
         string right = ">";
         string left = "<";
         string up = "↑";
         string down = "↓";
 
         string border = " | ";
-        string rock = "x";  // This variable isn't used in your Java code. 
-                            // You might want to integrate it or remove it.
-        string ground = "o";
+        //string obstacle = "x"; 
+        string ground = "_";
 
         int planetX = rover.GetPlanet().Width * 2 + 1;
         int planetY = rover.GetPlanet().Height * 2 + 1;

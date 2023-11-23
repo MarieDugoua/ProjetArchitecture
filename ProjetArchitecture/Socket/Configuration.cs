@@ -1,4 +1,4 @@
-namespace ProjetArchitecture.Configuration;
+namespace ProjetArchitecture.Socket;
 
 using System.Net;
 using System.Text;

@@ -1,4 +1,5 @@
-﻿var configuration = new Configuration.Configuration();
+﻿
+var configuration = new Configuration.Configuration();
 using var socketClient = new SocketClient.SocketClient(configuration);
 
 var @continue = true;

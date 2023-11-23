@@ -4,18 +4,17 @@ using ProjetArchitecture.Command;
 
 namespace ProjetArchitecture.MissionControl;
 
-// Entity
-public class Console : IDataCallback
+public class Console
 {
     private List<char> commands = new List<char>();
     private readonly Rover myRover;
-    // client
-    private readonly ICommunication client;  // Adjusted for your project structure
+   
+    private readonly ICommandReceiver client;
 
-    public Console(Rover _myRover, ICommunication _client)
+    public Console(Rover _myRover, ICommandReceiver _client)
     {
         myRover = _myRover;
-        client = _client;  // Dependency injected
+        client = _client; 
 
         // test client socket
         client.SetDataCallback(this);
@@ -80,7 +79,7 @@ public class Console : IDataCallback
         return Run(wantMap);
     }
 
-    private void PrintMap(IRover myRover)
+    private void PrintMap(Rover myRover)
     {
         Carte carte = new Carte(myRover);
     }
