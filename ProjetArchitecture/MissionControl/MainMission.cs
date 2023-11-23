@@ -14,8 +14,8 @@ class MainClass
 
         Rover rover = new Rover(new Position(0, 0), Orientation.N, navigator);
 
-        console = new Console(rover, yourCommunicationObject);
-        console.RunCommandProcessing();
+        Console myConsole = new Console(rover, yourCommunicationObject);
+        myConsole.RunCommand();
 
         Console.WriteLine("Rover is initialized and ready.");
     }

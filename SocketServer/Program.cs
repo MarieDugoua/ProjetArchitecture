@@ -1,7 +1,7 @@
 ﻿using System.Net.Sockets;
-using Configuration;
+using ProjetArchitecture.Socket;
 
-var configuration = new Configuration.Configuration();
+var configuration = new Configuration();
 var socketServer = new SocketServer.SocketServer(configuration, new ConsoleLogger());
 
 await socketServer.ListenAndSendResponseAsync(

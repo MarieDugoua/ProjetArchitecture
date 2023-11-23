@@ -1,16 +1,16 @@
 ﻿using System.Net.Sockets;
-using Configuration;
-using ProjetAarchitecture.Communication;
+using ProjetArchitecture.Socket;
+using ProjetArchitecture.Communication;
 
 namespace SocketServer;
 
 public class SocketServer : ICommandReceiver, IDisposable
 {
-    private readonly Configuration.Configuration _configuration;
+    private readonly Configuration _configuration;
     private readonly ILogger _logger;
     private readonly Socket _server;
 
-    public SocketServer(Configuration.Configuration configuration, ILogger logger)
+    public SocketServer(Configuration configuration, ILogger logger)
     {
         _configuration = configuration;
         _logger = logger;

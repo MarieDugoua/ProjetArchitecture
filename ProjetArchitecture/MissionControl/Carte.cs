@@ -1,72 +1,69 @@
 ﻿using ProjetArchitecture.MarsRover;
 using ProjetArchitecture.Topology;
+using System;
+using System.Text;
 
-namespace ProjetArchitecture.MissionControl;
-
-public class Carte
+namespace ProjetArchitecture.MissionControl
 {
-    public Carte(Rover rover)
+    public class Carte
     {
-        this.UI(rover);
-    }
+        private Rover rover;
+        private Planet planet;
 
-    public void UI(Rover rover)
-    {
-        string right = ">";
-        string left = "<";
-        string up = "↑";
-        string down = "↓";
-
-        string border = " | ";
-        //string obstacle = "x"; 
-        string ground = "_";
-
-        int planetX = rover.GetPlanet().Width * 2 + 1;
-        int planetY = rover.GetPlanet().Height * 2 + 1;
-
-        int roverX = rover.Position.X + rover.GetPlanet().Width;
-        int roverY = -rover.Position.Y + rover.GetPlanet().Height;
-
-        string[,] map = new string[planetX, planetY];
-
-        // Map Generation
-        for (int i = 0; i < planetY; i++)
+        public Carte(Rover rover, Planet planet)
         {
-            for (int j = 0; j < planetX; j++)
-            {
-                if (i == roverY && j == roverX)
-                {
-                    switch (rover.Orientation)
-                    {
-                        case Orientation.W:
-                            map[j, i] = left;
-                            break;
-                        case Orientation.E:
-                            map[j, i] = right;
-                            break;
-                        case Orientation.N:
-                            map[j, i] = up;
-                            break;
-                        case Orientation.S:
-                            map[j, i] = down;
-                            break;
-                    }
-                }
-                else
-                {
-                    map[j, i] = ground;
-                }
-            }
+            this.rover = rover;
+            this.planet = planet;
+            RefreshUI();
         }
 
-        // Display
-        for (int i = 0; i < planetX; i++)
+        public void RefreshUI()
         {
-            for (int j = 0; j < planetY; j++)
+            StringBuilder mapDisplay = new StringBuilder();
+            string border = " | ";
+            string ground = "_";
+            //string obstacle = "x"; 
+
+            int planetX = planet.Width * 2 + 1;
+            int planetY = planet.Height * 2 + 1;
+
+            int roverX = rover.Position.X + planet.Width;
+            int roverY = -rover.Position.Y + planet.Height;
+
+            string[,] map = new string[planetX, planetY];
+
+            // Map Generation
+            for (int y = 0; y < planetY; y++)
             {
-                Console.Write(border + map[j, i]);
+                for (int x = 0; x < planetX; x++)
+                {
+                    if (y == roverY && x == roverX)
+                    {
+                        map[x, y] = RoverOrientationSymbol(rover.Orientation);
+                    }
+                    else
+                    {
+                        map[x, y] = ground;
+                    }
+                    mapDisplay.Append(border + map[x, y]);
+                }
+                mapDisplay.AppendLine(border);
             }
-            Console.WriteLine(border);
+
+            // Display
+            Console.WriteLine(mapDisplay.ToString());
+        }
+
+        private string RoverOrientationSymbol(Orientation orientation)
+        {
+            switch (orientation)
+            {
+                case Orientation.W: return "<";
+                case Orientation.E: return ">";
+                case Orientation.N: return "↑";
+                case Orientation.S: return "↓";
+                default: return "?";
+            }
         }
     }
 }

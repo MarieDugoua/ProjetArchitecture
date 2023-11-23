@@ -1,5 +1,6 @@
-﻿
-var configuration = new Configuration.Configuration();
+﻿using ProjetArchitecture.Socket;
+
+var configuration = new Configuration();
 using var socketClient = new SocketClient.SocketClient(configuration);
 
 var @continue = true;
