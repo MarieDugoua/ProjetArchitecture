@@ -1,15 +1,13 @@
 ﻿using System.Net.Sockets;
-using ProjetArchitecture.Communication;
-using ProjetArchitecture.Socket;
 
 namespace SocketClient;
 
 public class SocketClient : ICommandSender, IDisposable
 {
-    private readonly Configuration _configuration;
+    private readonly Configuration.Configuration _configuration;
     private readonly Socket _client;
 
-    public SocketClient(Configuration configuration)
+    public SocketClient(Configuration.Configuration configuration)
     {
         _configuration = configuration;
         _client = new(

@@ -1,4 +1,4 @@
-﻿namespace ProjetAarchitecture.Communication;
+﻿namespace ProjetArchitecture.Communication;
 
 internal class Communication
 {

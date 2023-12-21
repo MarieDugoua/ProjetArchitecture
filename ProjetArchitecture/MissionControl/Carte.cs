@@ -22,7 +22,7 @@ namespace ProjetArchitecture.MissionControl
             StringBuilder mapDisplay = new StringBuilder();
             string border = " | ";
             string ground = "_";
-            //string obstacle = "x"; 
+            string obstacleSymbol = "x"; // Symbol for obstacle
 
             int planetX = planet.Width * 2 + 1;
             int planetY = planet.Height * 2 + 1;
@@ -40,6 +40,10 @@ namespace ProjetArchitecture.MissionControl
                     if (y == roverY && x == roverX)
                     {
                         map[x, y] = RoverOrientationSymbol(rover.Orientation);
+                    }
+                    else if (planet.HasObstacleAt(new Position(x - planet.Width, -y + planet.Height)))
+                    {
+                        map[x, y] = obstacleSymbol;
                     }
                     else
                     {

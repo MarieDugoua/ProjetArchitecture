@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
-using ProjetArchitecture.Socket;
 using ProjetArchitecture.Communication;
+using ProjetArchitecture.Socket;
 
 namespace SocketServer;
 
@@ -32,7 +32,7 @@ public class SocketServer : ICommandReceiver, IDisposable
         _server.Bind(_configuration.EndPoint);
         _server.Listen(100);
 
-        
+
 
         while (!token.IsCancellationRequested)
         {

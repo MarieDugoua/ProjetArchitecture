@@ -1,4 +1,4 @@
-﻿using System.Net.Sockets;
+﻿
 using ProjetArchitecture.Socket;
 
 var configuration = new Configuration();

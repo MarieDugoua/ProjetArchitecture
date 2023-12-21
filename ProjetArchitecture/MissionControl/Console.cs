@@ -1,6 +1,7 @@
 ﻿using ProjetArchitecture.MarsRover;
 using ProjetArchitecture.Communication;
 
+
 namespace ProjetArchitecture.MissionControl
 {
     public class Console
