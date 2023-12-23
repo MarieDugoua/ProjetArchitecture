@@ -18,9 +18,7 @@
   <ItemGroup>
     <Folder Include="Communication\" />
     <Folder Include="MarsRover\" />
-    <Folder Include="MissionControl\" />
     <Folder Include="Repeater\" />
-    <Folder Include="Socket\" />
     <Folder Include="Topology\" />
   </ItemGroup>
 </Project>

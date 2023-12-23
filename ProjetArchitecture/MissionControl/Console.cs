@@ -15,7 +15,7 @@ namespace ProjetArchitecture.MissionControl
         {
             this.myRover = myRover;
             this.client = client;
-            carte = new Carte(myRover);
+            //carte = new Carte();
 
             Task.Run(() => client.ListenAndSendResponseAsync(ProcessCommand, new CancellationToken()));
         }

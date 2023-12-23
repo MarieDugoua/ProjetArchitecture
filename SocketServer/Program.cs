@@ -1,8 +1,13 @@
 ﻿
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
+using ProjetArchitecture.Communication;
 using ProjetArchitecture.Socket;
 
-var configuration = new Configuration();
-var socketServer = new SocketServer.SocketServer(configuration, new ConsoleLogger());
+var communicationConfig = new CommunicationConfig();
+var logger = new ConsoleLogger(); // ou un autre logger de votre choix
+
+using var socketServer = new SocketServer.SocketServer(new Configuration(communicationConfig.ServerIp, communicationConfig.ServerPort), logger);
+
 
 await socketServer.ListenAndSendResponseAsync(
     request => new string(request.Reverse().ToArray()),

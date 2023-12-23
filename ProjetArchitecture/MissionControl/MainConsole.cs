@@ -3,7 +3,7 @@ using ProjetArchitecture.Socket;
 using ProjetArchitecture.Topology;
 
 
-public class Program
+public class MainConsole
 {
     static async Task Main(string[] args)
     {
@@ -12,20 +12,19 @@ public class Program
         Navigator navigator = new Navigator(mars);
         Rover rover = new Rover(new Position(0, 0), Orientation.N, navigator);
 
-        var configuration = new Configuration();
+        var configuration = new Configuration("127.0.0.1", 8080);
         var logger = new ConsoleLogger();
-        using var socketServer = new SocketServer(configuration, logger);
 
-        var myConsole = new ProjetArchitecture.MissionControl.Console(rover, socketServer);
+       // var myConsole = new ProjetArchitecture.MissionControl.Console(rover, socketServer);
         System.Console.WriteLine("Rover is initialized and ready.");
 
-        await socketServer.ListenAndSendResponseAsync(
+        /*await socketServer.ListenAndSendResponseAsync(
             request =>
             {
                 myConsole.OnDataReceived(request);
                 return "Processed";
             },
-            CancellationToken.None);
+            CancellationToken.None);*/
     }
 }
 

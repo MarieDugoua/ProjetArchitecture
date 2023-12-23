@@ -1,5 +1,9 @@
-﻿var configuration = new Configuration.Configuration();
-using var socketClient = new SocketClient.SocketClient(configuration);
+﻿using ProjetArchitecture.Communication;
+using ProjetArchitecture.Socket;
+var communicationConfig = new CommunicationConfig();
+using var socketClient = new SocketClient.SocketClient(new Configuration(communicationConfig.ServerIp, communicationConfig.ServerPort));
+
+
 
 var @continue = true;
 
