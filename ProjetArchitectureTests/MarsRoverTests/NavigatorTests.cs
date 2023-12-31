@@ -5,13 +5,12 @@ using ProjetArchitecture.Topology;
 [TestClass]
 public class NavigatorTests
 {
-    private Planet planet;
     private Navigator navigator;
 
     [TestInitialize]
     public void TestInitialize()
     {
-        planet = new Planet(10, 10);
+        Planet planet = new Planet(10, 10);
         navigator = new Navigator(planet);
     }
 
