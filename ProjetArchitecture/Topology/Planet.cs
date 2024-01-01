@@ -10,7 +10,7 @@ public class Planet
     public int Height { get; private set; }
     private readonly List<Obstacle> _obstacles;
 
-    public Planet(int width, int height, IEnumerable<Obstacle> obstacles = null)
+    public Planet(int width, int height, IEnumerable<Obstacle>? obstacles = null)
     {
         Width = width;
         Height = height;

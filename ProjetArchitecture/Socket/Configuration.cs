@@ -11,7 +11,7 @@ public class Configuration
     public IPEndPoint EndPoint => new(Ip, Port);
     public Encoding Encoding => Encoding.UTF8;
 
-    public Configuration(String ip,int port)
+    public Configuration(String ip, int port)
     {
         Ip = IPAddress.Parse(ip);
         Port = port;
